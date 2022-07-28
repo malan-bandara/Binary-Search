@@ -1,10 +1,5 @@
 import sys 
 
-array = [1,3,4,6,8,11,23,27,30]
-begin_index = 0
-finish_index = len(array)-1
-target = int(sys.argv[1])
-
 def validateTarget(target):
     if target >= array[begin_index] and target <= array[finish_index]:
         pass
@@ -34,11 +29,14 @@ def binarySearch(begin_index, finish_index, target, array):
     elif target < mid_value:
         finish_index = mid-1
         binarySearch(begin_index,finish_index,target,array)
-        #If the target doesn't exist in the array
+    #If the target doesn't exist in the array
     else:
         print (f"Target: {target} doesn't exist!")
 
-
+array = [1,3,4,6,8,11,23,27,30]
+begin_index = 0
+finish_index = len(array)-1
+target = int(sys.argv[1])
 validateTarget(target)
 binarySearch(begin_index, finish_index, target, array)
 
