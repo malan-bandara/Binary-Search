@@ -34,6 +34,7 @@ def binarySearch(begin_index, finish_index, target, array):
     elif target < mid_value:
         finish_index = mid-1
         binarySearch(begin_index,finish_index,target,array)
+        #If the target doesn't exist in the array
     else:
         print (f"Target: {target} doesn't exist!")
 
